@@ -1,0 +1,41 @@
+.task_page {
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+    gap: 35px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.task_page__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task_page__title {
+    cursor: default;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.task_page__button {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.task_page__body {
+    width: 100%;
+}
+
+.task_page__textarea {
+    resize: none;
+    border: none;
+    width: 100%;
+    height: fit-content;
+    max-height: 500px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+}

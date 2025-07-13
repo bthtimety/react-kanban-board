@@ -1,0 +1,35 @@
+.header {
+    height: 55px;
+    padding: 10px 9px;
+    background-color: #0067A3;
+
+    @media screen and (min-width: 1150px) {
+        padding: 7px 25px;
+    }
+}
+
+.header__link {
+    margin: 0;
+    padding: 0;
+}
+
+.header__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    @media screen and (min-width: 480px) {
+        font-size: 20px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 28px;
+    }
+}

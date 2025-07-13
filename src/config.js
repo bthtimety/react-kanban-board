@@ -1,0 +1,15 @@
+const LIST_TYPES = {
+    BACKLOG: "Backlog",
+    READY: "Ready",
+    IN_PROGRESS: "In Progress",
+    FINISHED: "Finished"
+};
+
+const LIST_TYPES_ORDER = [
+    LIST_TYPES.BACKLOG,
+    LIST_TYPES.READY,
+    LIST_TYPES.IN_PROGRESS,
+    LIST_TYPES.FINISHED
+]
+
+export {LIST_TYPES, LIST_TYPES_ORDER}

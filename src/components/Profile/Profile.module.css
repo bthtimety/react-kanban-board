@@ -1,0 +1,56 @@
+.profile {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.profile__arrow {
+    transition: 0.2s;
+}
+
+.profile__dropdown {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 134px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 7px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px #0000001A;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 40px;
+        border-style: solid;
+        border-width: 0 11px 11px 11px;
+        border-color: transparent transparent white transparent;
+    }
+}
+
+.profile__dropdown_item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #DEDEDE;
+    }
+
+    a {
+        width: 100%;
+        padding-left: 4px;
+        font-size: 14px;
+        color: #000000;
+    }
+}
