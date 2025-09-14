@@ -1,9 +1,8 @@
-import {useState} from "react"
-import {Link} from "react-router-dom"
-import style from "./List.module.css"
-import addBtnImg from "../../assets/add-btn-img.svg"
-import Form from "../Form/Form"
-import {LIST_TYPES} from "../../config"
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import style from "./List.module.css";
+import addBtnImg from "../../assets/add-btn-img.svg";
+import Form from "../Form/Form";
 
 const List = props => {
     const {type, issues, addNewTask} = props;
@@ -26,21 +25,23 @@ const List = props => {
                     </Link>
                 ))}
             </div>
-            {type === LIST_TYPES.BACKLOG && (
-                <button
-                    className={style.list__button}
-                    style={{display: isFormVisible ? "none" : "flex"}}
-                    onClick={handleClick}
-                >
-                    <img src={addBtnImg} alt="Plus"/>
-                    <span>Add card</span>
-                </button>
-            )}
-            {type === LIST_TYPES.BACKLOG && isFormVisible && (
-                <Form addNewTask={addNewTask} setFormVisible={setFormVisible}/>
+            <button
+                className={style.list__button}
+                style={{display: isFormVisible ? "none" : "flex"}}
+                onClick={handleClick}
+            >
+                <img src={addBtnImg} alt="Plus"/>
+                <span>Add card</span>
+            </button>
+            {isFormVisible && (
+                <Form
+                    addNewTask={addNewTask}
+                    setFormVisible={setFormVisible}
+                    type={type}
+                />
             )}
         </div>
-    )
-}
+    );
+};
 
-export default List
+export default List;

@@ -1,7 +1,7 @@
-import style from "./Board.module.css"
-import List from "../List/List"
-import {generateId} from "../../utils"
-import {LIST_TYPES, LIST_TYPES_ORDER} from "../../config"
+import style from "./Board.module.css";
+import List from "../List/List";
+import {generateId} from "../../utils";
+import {LIST_TYPES, LIST_TYPES_ORDER} from "../../config";
 
 const Board = props => {
     const {tasks, setTasks} = props;
@@ -22,7 +22,7 @@ const Board = props => {
                     issues: [...(list.issues), newTask]
                 }
             }
-            return list
+            return list;
         });
         setTasks(updatedTasks);
     };
@@ -37,10 +37,10 @@ const Board = props => {
                         issues={list.issues}
                         addNewTask={addNewTask}
                     />
-                )
+                );
             })}
         </div>
-    )
-}
+    );
+};
 
-export default Board
+export default Board;

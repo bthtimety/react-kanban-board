@@ -1,4 +1,4 @@
-import style from "./Footer.module.css"
+import style from "./Footer.module.css";
 
 const Footer = () => {
     return (
@@ -11,7 +11,7 @@ const Footer = () => {
                 <p className={style.footer__author}>Kanban board by Anastasia Zaytseva, 2025</p>
             </div>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

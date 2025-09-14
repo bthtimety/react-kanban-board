@@ -1,6 +1,6 @@
-import {useParams, Link} from "react-router-dom"
-import style from "./TaskPage.module.css"
-import closeBtnImg from "../../assets/close-btn-img.svg"
+import {useParams, Link} from "react-router-dom";
+import style from "./TaskPage.module.css";
+import closeBtnImg from "../../assets/close-btn-img.svg";
 
 const TaskPage = props => {
     const {tasks} = props;
@@ -22,7 +22,7 @@ const TaskPage = props => {
                 <textarea className={style.task_page__textarea}></textarea>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default TaskPage
+export default TaskPage;

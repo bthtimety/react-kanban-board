@@ -1,7 +1,7 @@
-import {useState} from "react"
-import style from "./Profile.module.css"
-import userAvatar from "../../assets/user-avatar.svg"
-import dropdownArrow from "../../assets/dropdown-arrow.svg"
+import {useState} from "react";
+import style from "./Profile.module.css";
+import userAvatar from "../../assets/user-avatar.svg";
+import dropdownArrow from "../../assets/dropdown-arrow.svg";
 
 const Profile = () => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -30,7 +30,7 @@ const Profile = () => {
                 </div>
             )}
         </nav>
-    )
-}
+    );
+};
 
-export default Profile
+export default Profile;

@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom"
-import style from "./Header.module.css"
-import Profile from "../Profile/Profile"
+import {Link} from "react-router-dom";
+import style from "./Header.module.css";
+import Profile from "../Profile/Profile";
 
 const Header = () => {
     return (
@@ -12,7 +12,7 @@ const Header = () => {
                 <Profile/>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
