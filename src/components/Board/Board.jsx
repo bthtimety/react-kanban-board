@@ -27,6 +27,32 @@ const Board = props => {
         setTasks(updatedTasks);
     };
 
+    const moveTask = (task, oldType, newType) => {
+        const updatedTasks = tasks.map(list => {
+            if (list.type === oldType) {
+                return {
+                    ...list,
+                    issues: list.issues.filter(issue => issue.id !== task)
+                }
+            }
+
+            if (list.type === newType) {
+                const taskToMove = tasks
+                    .find(list => list.type === oldType)
+                    ?.issues.find(issue => issue.id === task);
+
+                if (taskToMove) {
+                    return {
+                        ...list,
+                        issues: [...list.issues, taskToMove]
+                    }
+                }
+            }
+            return list;
+        });
+        setTasks(updatedTasks);
+    };
+
     return (
         <div className={style.board}>
             {orderedLists.map((list) => {
@@ -36,6 +62,8 @@ const Board = props => {
                         type={list.type}
                         issues={list.issues}
                         addNewTask={addNewTask}
+                        moveTask={moveTask}
+                        allTasks={tasks}
                     />
                 );
             })}

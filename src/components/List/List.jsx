@@ -5,7 +5,7 @@ import addBtnImg from "../../assets/add-btn-img.svg";
 import Form from "../Form/Form";
 
 const List = props => {
-    const {type, issues, addNewTask} = props;
+    const {type, issues, addNewTask, moveTask, allTasks} = props;
 
     const [isFormVisible, setFormVisible] = useState(false);
 
@@ -18,8 +18,8 @@ const List = props => {
             <h2 className={style.list__title}>{type}</h2>
             <div className={style.list__body}>
                 {issues.map(issue => (
-                    <Link to={`/tasks/${issue.id}`} className={style.list__task_link}>
-                        <div className={style.list__item} key={issue.id}>
+                    <Link to={`/tasks/${issue.id}`} key={issue.id} className={style.list__task_link}>
+                        <div className={style.list__item}>
                             <p>{issue.title}</p>
                         </div>
                     </Link>
@@ -36,6 +36,8 @@ const List = props => {
             {isFormVisible && (
                 <Form
                     addNewTask={addNewTask}
+                    moveTask={moveTask}
+                    allTasks={allTasks}
                     setFormVisible={setFormVisible}
                     type={type}
                 />
