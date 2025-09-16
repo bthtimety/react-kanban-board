@@ -1,19 +1,20 @@
 import {useState} from "react";
 import style from "./Form.module.css";
-import {LIST_TYPES, LIST_TYPES_ORDER} from "../../config";
+import {LIST_TYPES} from "../../config";
 
 const Form = props => {
-    const {addNewTask, setFormVisible, type, moveTask, allTasks} = props;
+    const {addNewTask, setFormVisible, type, moveTask, previousType, availableTasks} = props;
     const [values, setValues] = useState({
         title: "",
         selectedTask: ""
     });
 
-    const currentType = LIST_TYPES_ORDER.indexOf(type);
-    const previousType = LIST_TYPES_ORDER[currentType - 1];
-
-    const getTasks = () => {
-        return allTasks.find(list => list.type === previousType)?.issues || [];
+    const isSubmitDisabled = () => {
+        if (type === LIST_TYPES.BACKLOG) {
+            return !values.title.trim();
+        } else {
+            return !values.selectedTask;
+        }
     };
 
     const handleChange = (e) => {
@@ -48,6 +49,7 @@ const Form = props => {
                         type="text"
                         value={values.title}
                         onChange={handleChange}
+                        placeholder="Enter a task name..."
                     />
                     :
                     <select
@@ -56,15 +58,25 @@ const Form = props => {
                         value={values.selectedTask}
                         onChange={handleChange}
                     >
-                        <option value=""></option>
-                        {getTasks().map(task => (
+                        <option
+                            className={style.form__select_option}
+                            value=""
+                            disabled
+                        >Choose a task...</option>
+                        {availableTasks.map(task => (
                             <option key={task.id} value={task.id}>
                                 {task.title}
                             </option>
                         ))}
                     </select>
             }
-            <button className={style.form__button} type="submit">Submit</button>
+            <button
+                className={style.form__button}
+                disabled={isSubmitDisabled()}
+                type="submit"
+            >
+                Submit
+            </button>
         </form>
     );
 };

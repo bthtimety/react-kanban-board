@@ -12,6 +12,19 @@
     background-color: #FFFFFF;
 }
 
+.form__select {
+    padding: 7px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #FFFFFF;
+}
+
+.form__select_option {
+    background-color: #FFFFFF;
+}
+
 .form__button {
     width: 105px;
     padding: 7px 6px;
@@ -20,9 +33,14 @@
     font-weight: 400;
     color: #FFFFFF;
     background-color: #0079BF;
-    transition: 0.5s;
+    transition: hover 0.5s;
 
     &:hover {
         background-color: #0067A3;
+    }
+    &:disabled {
+        background-color: #CCCCCC;
+        cursor: not-allowed;
+        opacity: 0.6;
     }
 }

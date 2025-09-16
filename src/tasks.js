@@ -1,0 +1,59 @@
+const data = [
+    {
+        "type": "Backlog",
+        "issues": [
+            {
+                "id": "111",
+                "title": "Login page – performance issues",
+                "description": "Some text"
+            },
+            {
+                "id": "222",
+                "title": "Sprint bugfix",
+                "description": "Fix all the bugs"
+            }
+        ]
+    },
+    {
+        "type": "Ready",
+        "issues": [
+            {
+                "id": "333",
+                "title": "Shop page – performance issues",
+                "description": "Some text"
+            },
+            {
+                "id": "444",
+                "title": "Checkout bugfix",
+                "description": "Fix all the bugs"
+            },
+            {
+                "id": "555",
+                "title": "Shop page – performance issues",
+                "description": "Some text"
+            }
+        ]
+    },
+    {
+        "type": "In Progress",
+        "issues": [
+            {
+                "id": "666",
+                "title": "User page – performance issues",
+                "description": "Some text"
+            }
+        ]
+    },
+    {
+        "type": "Finished",
+        "issues": [
+            {
+                "id": "777",
+                "title": "Main page – performance issues",
+                "description": "Some text"
+            }
+        ]
+    }
+];
+
+export default data;

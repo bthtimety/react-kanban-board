@@ -46,11 +46,11 @@
         cursor: pointer;
         background-color: #DEDEDE;
     }
+}
 
-    a {
-        width: 100%;
-        padding-left: 4px;
-        font-size: 14px;
-        color: #000000;
-    }
+.profile__link {
+    width: 100%;
+    padding-left: 4px;
+    font-size: 14px;
+    color: #000000;
 }
