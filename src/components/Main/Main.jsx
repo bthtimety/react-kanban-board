@@ -8,13 +8,13 @@ const Main = props => {
         <main className={style.main}>
             <Routes>
                 <Route
-                    path="/"
+                    path="/react-kanban-board/"
                     element={
                         <Board {...props}/>
                     }
                 />
                 <Route
-                    path="/tasks/:taskId"
+                    path="tasks/:taskId"
                     element={
                         <TaskPage {...props}/>
                     }

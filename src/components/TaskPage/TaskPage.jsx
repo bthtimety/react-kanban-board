@@ -40,7 +40,7 @@ const TaskPage = props => {
         <div className={style.task_page}>
             <div className={style.task_page__header}>
                 <h2 className={style.task_page__title}>{task.title}</h2>
-                <Link to="/" className={style.task_page__button}>
+                <Link to="/react-kanban-board/" className={style.task_page__button}>
                     <img src={closeBtnImg} alt="Close"/>
                 </Link>
             </div>

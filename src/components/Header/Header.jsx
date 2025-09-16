@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className={style.header}>
             <div className={style.header__container}>
-                <Link to={"/"} className={style.header__link}>
+                <Link to={"/react-kanban-board/"} className={style.header__link}>
                     <h1 className={style.header__title}>Awesome Kanban Board</h1>
                 </Link>
                 <Profile/>
